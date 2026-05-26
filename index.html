@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games - Play Anywhere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎮 Unblocked Games</h1>
+            <p>Play classic games anywhere, anytime</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Unblocked Games!</h2>
+                <p>Access your favorite games without restrictions</p>
+                <button class="cta-btn" onclick="document.getElementById('games').scrollIntoView({behavior: 'smooth'})">
+                    Start Playing Now
+                </button>
+            </div>
+        </section>
+
+        <section id="games" class="games-container">
+            <h2>Available Games</h2>
+            <div class="games-grid">
+                <div class="game-card" onclick="openGame('snake')">
+                    <div class="game-icon">🐍</div>
+                    <h3>Snake Game</h3>
+                    <p>Classic snake gameplay - eat food, grow longer, avoid walls</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+
+                <div class="game-card" onclick="openGame('flappybird')">
+                    <div class="game-icon">🐦</div>
+                    <h3>Flappy Bird</h3>
+                    <p>Tap to fly - avoid pipes and score as high as you can</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+
+                <div class="game-card" onclick="openGame('pong')">
+                    <div class="game-icon">🏓</div>
+                    <h3>Pong</h3>
+                    <p>Classic two-player paddle game - defend and attack</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+
+                <div class="game-card" onclick="openGame('tetris')">
+                    <div class="game-icon">🧱</div>
+                    <h3>Tetris</h3>
+                    <p>Stack blocks and clear lines to score points</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+
+                <div class="game-card" onclick="openGame('breakout')">
+                    <div class="game-icon">🎯</div>
+                    <h3>Breakout</h3>
+                    <p>Break all the bricks with your paddle and ball</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+
+                <div class="game-card" onclick="openGame('2048')">
+                    <div class="game-icon">2️⃣</div>
+                    <h3>2048</h3>
+                    <p>Slide tiles and combine numbers to reach 2048</p>
+                    <button class="play-btn">Play Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About This Site</h2>
+            <p>This is a collection of classic unblocked games that you can play directly in your browser. No downloads, no installations, just pure gaming fun. Perfect for school breaks, lunch periods, or anytime you need a quick gaming session.</p>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGame()">&times;</span>
+            <div id="gameArea"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Unblocked Games. All rights reserved. | <a href="https://github.com/avery244/unblocked-games">GitHub</a></p>
+    </footer>
+
+    <script src="games.js"></script>
+</body>
+</html>
